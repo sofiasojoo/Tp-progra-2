@@ -1,5 +1,6 @@
-const objeto = {
-    usuario: g,
+
+const objetoProductos = {
+    usuario: [],
     prductos: [
         {},
         {},

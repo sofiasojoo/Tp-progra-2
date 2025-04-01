@@ -1,6 +1,13 @@
 const productos = require("../db/main")
 const productController={
-    index: h,
+    index: function(req, res, next) {
+        let listaProductos=[]
+        for(let i=0; i<objetos.producto.length; i++){
+          listaProductos.push(objetos.producto[i])
+        }
+      
+        res.render('index', {lista: listaProductos});
+      },
     productos: function(req, res, next) {
         let listaProductos=[]
         for(let i=0; i<objetos.producto.length; i++){
@@ -25,3 +32,5 @@ const productController={
       }
       , 
 }
+
+module.exports= productController
