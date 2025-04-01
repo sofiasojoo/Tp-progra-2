@@ -14,3 +14,5 @@ const objeto = {
 
     ]
 }
+
+module.exports= objetoProductos
