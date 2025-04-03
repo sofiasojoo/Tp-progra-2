@@ -31,6 +31,9 @@ const productController={
         res.render('product', { detalleProductoComentarios: detalleProductoComentarios});
       }
       , 
+      profile: function(req, res){
+        
+      }
 }
 
 module.exports= productController

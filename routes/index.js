@@ -12,6 +12,11 @@ router.get('/product/:id', productController.detalle);
 
 router.get('/product/:id/comentarios', productController.comentarios);
 
+router.get("/profile", productController.profile)
+
 
 
 module.exports = router;
+
+// consultar cuales son las rutas que hay que 
+//hacer, no se termina de entender la consigna
