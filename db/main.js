@@ -1,8 +1,24 @@
 
 const objetoProductos = {
-    usuario: [],
+    usuario: {
+        email: "",
+        usuario: "",
+        password:"",
+        fechaNacimiento: "",
+        nDocumento: 0,
+        foto: ""
+    },
     prductos: [
-        {},
+        {
+            imagen: "",
+            nombre: "",
+            descripcion: "",
+            comentarios: [{
+                nombres: "",
+                texto: "",
+                imagen: ""
+            },]
+        },
         {},
         {},
         {},

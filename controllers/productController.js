@@ -2,8 +2,8 @@ const productos = require("../db/main")
 const productController={
     index: function(req, res, next) {
         let listaProductos=[]
-        for(let i=0; i<objetos.producto.length; i++){
-          listaProductos.push(objetos.producto[i])
+        for(let i=0; i<productos.length; i++){
+          listaProductos.push(productos[i])
         }
       
         res.render('index', {lista: listaProductos});
