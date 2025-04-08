@@ -42,7 +42,7 @@ ol {
 
 a {
   display: inline-block;
-  color: inherit;
+ 
   /*====== borre el text decoration none ======*/
 }
 
@@ -54,8 +54,8 @@ figure {
 img {
   width: 100%;
 }
-h1{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+h2{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   /*====== agegue una tipografia diferente a lso titulos ======*/
 }
 

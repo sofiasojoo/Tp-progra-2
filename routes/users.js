@@ -9,6 +9,6 @@ router.get('/', function(req, res, next) {
 
 });
 
-router.get("/profile", productController.profile)
+
 
 module.exports = router;

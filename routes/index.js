@@ -16,6 +16,12 @@ router.get('/products/id/:id', productController.detalle);
 
 router.get('/products/id/:id/comentarios', productController.comentarios);
 
+router.get('/register', productController.register);
+router.get('/login', productController.login);
+router.get('/product-add', productController.productadd);
+router.get("/profile", productController.profile)
+
+
 
 
 
