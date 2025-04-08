@@ -4,15 +4,20 @@ const productos= require("../db/main")
 const productController= require("../controllers/productController")
 
 /* GET home page. */
-router.get('/', productController.index);
 
-router.get('/product', productController.productos);
 
-router.get('/product/:id', productController.detalle);
+router.get("/search-results", productController.profile)
 
-router.get('/product/:id/comentarios', productController.comentarios);
+router.get('/products', productController.productos);
 
-router.get("/profile", productController.profile)
+router.get('/products/id/:id', productController.detalle);
+
+router.get('/products/id/:id/comentarios', productController.comentarios);
+
+
+
+
+
 
 
 

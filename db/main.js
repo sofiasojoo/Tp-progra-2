@@ -1,11 +1,11 @@
 
 const objetoProductos = {
     usuario: {
-        email: "",
-        usuario: "",
-        password:"",
-        fechaNacimiento: "",
-        nDocumento: 0,
+        email: "pablo.gomez@gmail.com",
+        usuario: "pablo123",
+        password:"pablo123",
+        fechaNacimiento: "06/07/2000",
+        nDocumento: 40000000,
         foto: ""
     },
     prductos: [
@@ -19,15 +19,96 @@ const objetoProductos = {
                 imagen: ""
             },]
         },
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
+        {
+            imagen: "",
+            nombre: "",
+            descripcion: "",
+            comentarios: [{
+                nombres: "",
+                texto: "",
+                imagen: ""
+            },]
+        },
+        {
+            imagen: "",
+            nombre: "",
+            descripcion: "",
+            comentarios: [{
+                nombres: "",
+                texto: "",
+                imagen: ""
+            },]
+        },
+        {
+            imagen: "",
+            nombre: "",
+            descripcion: "",
+            comentarios: [{
+                nombres: "",
+                texto: "",
+                imagen: ""
+            },]
+        },
+        {
+            imagen: "",
+            nombre: "",
+            descripcion: "",
+            comentarios: [{
+                nombres: "",
+                texto: "",
+                imagen: ""
+            },]
+        },
+        {
+            imagen: "",
+            nombre: "",
+            descripcion: "",
+            comentarios: [{
+                nombres: "",
+                texto: "",
+                imagen: ""
+            },]
+        },
+        {
+            imagen: "",
+            nombre: "",
+            descripcion: "",
+            comentarios: [{
+                nombres: "",
+                texto: "",
+                imagen: ""
+            },]
+        },
+        {
+            imagen: "",
+            nombre: "",
+            descripcion: "",
+            comentarios: [{
+                nombres: "",
+                texto: "",
+                imagen: ""
+            },]
+        },
+        {
+            imagen: "",
+            nombre: "",
+            descripcion: "",
+            comentarios: [{
+                nombres: "",
+                texto: "",
+                imagen: ""
+            },]
+        },
+        {
+            imagen: "",
+            nombre: "",
+            descripcion: "",
+            comentarios: [{
+                nombres: "",
+                texto: "",
+                imagen: ""
+            },]
+        },
 
     ]
 }
