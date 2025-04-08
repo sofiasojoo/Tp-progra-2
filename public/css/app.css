@@ -27,7 +27,8 @@ body {
 }
 
 body {
-  font-family: var(--base-font-family);
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  /*====== cambie el font family======*/
   font-weight: 300;
   background-color: var(--light-gray);
 }
@@ -41,8 +42,8 @@ ol {
 
 a {
   display: inline-block;
-  text-decoration: none;
   color: inherit;
+  /*====== borre el text decoration none ======*/
 }
 
 figure {
@@ -52,6 +53,10 @@ figure {
 
 img {
   width: 100%;
+}
+h1{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /*====== agegue una tipografia diferente a lso titulos ======*/
 }
 
 input,

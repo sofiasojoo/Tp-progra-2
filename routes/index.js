@@ -5,7 +5,9 @@ const productController= require("../controllers/productController")
 
 /* GET home page. */
 
-
+router.get('/', (req, res) => {
+    res.render('index'); 
+  });
 router.get("/search-results", productController.profile)
 
 router.get('/products', productController.productos);

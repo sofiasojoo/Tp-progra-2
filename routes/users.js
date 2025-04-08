@@ -7,7 +7,8 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 
 
-  router.get("/profile", productController.profile)
 });
+
+router.get("/profile", productController.profile)
 
 module.exports = router;
