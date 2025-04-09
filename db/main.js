@@ -8,7 +8,7 @@ const objetoProductos = {
         nDocumento: 40000000,
         foto: ""
     },
-    prductos: [
+    productos: [
         {
             imagen: "",
             nombre: "",

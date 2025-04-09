@@ -1,25 +1,17 @@
 var express = require('express');
 var router = express.Router();
 const productos= require("../db/main")
-const productController= require("../controllers/productController")
+const indexController= require("../controllers/indexController")
 
 /* GET home page. */
 
-router.get('/', (req, res) => {
-    res.render('index'); 
-  });
-router.get("/search-results", productController.profile)
 
-router.get('/products', productController.productos);
 
-router.get('/products/id/:id', productController.detalle);
 
-router.get('/products/id/:id/comentarios', productController.comentarios);
-
-router.get('/register', productController.register);
-router.get('/login', productController.login);
-router.get('/product-add', productController.productadd);
-router.get("/profile", productController.profile)
+router.get('/', indexController.index);
+router.get('/register', indexController.register);
+router.get('/login', indexController.login);
+router.get("/profile", indexController.profile)
 
 
 

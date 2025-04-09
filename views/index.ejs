@@ -92,7 +92,7 @@
 			<!-- Show the "ultimos" products -->
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
-					<a href="/products">
+					<a href="/products/id/2">
 						<figure class="product-box_image">
 							<img src="/images/products/default-image.png" alt="cafetera moulinex">
 						</figure>
@@ -106,7 +106,7 @@
 			</div>
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
-					<a href="/products">
+					<a href="/products/id/2">
 						<figure class="product-box_image">
 							<img src="/images/products/default-image.png" alt="cafetera moulinex">
 							<!-- no se ve la imagen, hay que consultar que cambiar  -->
@@ -122,7 +122,7 @@
 			</div>
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
-					<a href="/products">
+					<a href="/products/id/2">
 						<figure class="product-box_image">
 							<img src="/images/products/default-image.png" alt="cafetera moulinex">
 							
@@ -139,7 +139,7 @@
 			</div>
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
-					<a href="/products"> 
+					<a href="/products/id/2"> 
 						<figure class="product-box_image">
 							<img src="/images/products/default-image.png" alt="cafetera moulinex">
 						</figure>
@@ -151,6 +151,26 @@
 						</article>
 					</a>
 				</section>
+			</div>
+			<div class="col-12 col-sm-6 col-lg-3">
+				
+					<% for (let i = 0; i < productosHome.length; i++) { %>
+						<section class="product-box">
+							<a href="/products/id/2"> 
+								<figure class="product-box_image">
+									<img src="/images/products/default-image.png" alt="cafetera moulinex">
+									<img src="<%= productosHome.imagen %>" alt="">
+								</figure>
+								<article class="product-box_data">
+									<h2> <a href="/products/id/2"><%= productosHome.nombre %></a></h2>
+									
+									<p><%= productosHome.descripcion %></p>
+									
+								</article>
+							</a>
+						</section>
+					  <% } %>
+				</div>
 			</div>
 		</div>
 	</div>
