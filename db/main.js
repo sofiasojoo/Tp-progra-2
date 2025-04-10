@@ -5,8 +5,8 @@ const objetoProductos = {
         usuario: "pablo123",
         password:"pablo123",
         fechaNacimiento: "06/07/2000",
-        nDocumento: 40000000,
-        foto: "https://plus.unsplash.com/premium_photo-1689565611422-b2156cc65e47?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHBlcnNvbmF8ZW58MHx8MHx8fDA%3D"
+        DNI: 40000000,
+        fotoPerfil: "https://plus.unsplash.com/premium_photo-1689565611422-b2156cc65e47?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHBlcnNvbmF8ZW58MHx8MHx8fDA%3D"
     },
     productos: [
         {

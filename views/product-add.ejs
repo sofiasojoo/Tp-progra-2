@@ -27,11 +27,25 @@
 				<h2 class="products-title">Agregar productos</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-			<h2 class="col-12"> <i>///////////////////////////////////////// <br> Acá va el formulario para agregar prodcutos al catálogo. <br>
-			Debe cumplir con los puntos de la consigna y ser coherente con la tabla de la base de datos. <br>
-			Eliminen estás líneas y coloquen el formulario. <br>
-			Recuerden todo lo que necesita tanto la etiqueta form como los campos input para operar correctamtente</i> <br>
-			////////////////
+			<h2 class="col-12"> 
+				<main class="register">
+					<form class="form_register" method="get" enctype="multipart/form-data">
+						<div>
+							<label for="imagen"><b>Imagen</b></label>
+							<input class="foto" type="file" name="imagen" id="imagen" required>
+						</div>
+						<div>
+							<label for="nombre"><b>Nombre del producto</b></label>
+							<input type="text" name="nombre" id="nombre" placeholder="Escriba el nombre del producto" required>
+						</div>
+						<div>
+							<label for="descripcion"><b>Descripcion</b></label>
+							<input type="text" name="descripcion" id="descripcion" placeholder="Escriba la descripcion del producto" required>
+						</div>
+					<button type="submit"> <b>Enviar</b> </button>
+						
+					</form>
+				</main>
 			</h2>
 			
 	<%- include("./partials/footer.ejs")%>

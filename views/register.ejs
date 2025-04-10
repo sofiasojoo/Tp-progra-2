@@ -27,25 +27,41 @@
 				<h2 class="products-title">Registrate</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-			<h2 class="col-12"> <i>///////////////////////////////////////// <br> Acá va el formulario de registro. <br>
-			Debe cumplir con los puntos de la consigna y ser coherente con la tabla de la base de datos <br>
-			Eliminen estás líneas y coloquen el formulario. <br>
-			Recuerden todo lo que necesita tanto la etiqueta form como los campos input para operar correctamtente</i> <br>
-			////////////////
-			</h2>
+			<h2 class="col-12"> 
 			<main class="register">
-			<form action="login.html" get="GET" class="formu"> 
-				<input type="email" placeholder="Email" required>
-				<input type="usuario" placeholder="Nombre de usuario" required>
-				<input type="password" placeholder="Contraseña">
-				<input type="fecha_nacimiento" placeholder="Fecha de nacimiento" required>
-				<input type="DNI" placeholder="DNI" required>
-				<input type="foto_perfil" placeholder="Foto de perfil">
-				<button type="submit">Registrarse</button>
-				<a href="./login.ejs">Ya tengo cuenta</a>
-			</form>
+				<form class="form_register" method="get" enctype="multipart/form-data">
+					<div>
+						<label for="email"><b>Email</b></label>
+						<input type="email" name="email" id="email" placeholder="Escriba tu email" required>
+					</div>
+					<div>
+						<label for="usuario"><b>Usuario</b></label>
+						<input type="text" name="usuario" id="usuario" placeholder="Escriba tu usuario" required>
+					</div>
+					<div>
+						<label for="contraseña"><b>Password</b></label>
+						<input type="password" name="contraseña" id="contraseña" placeholder="Escriba tu contraseña" required>
+					</div>
+					<div>
+						<label for="fecha_nacimiento"><b>Fecha de nacimiento</b></label>
+						<input type="date" name="fecha_nacimiento" id="fecha_nacimiento" placeholder="Escriba tu fecha de nacimiento" required>
+					</div>
+					<div>
+						<label for="DNI"><b>DNI</b></label>
+						<input type="number" name="DNI" id="DNI" placeholder="Escriba tu DNI" required>
+					</div>
+					<div>
+						<label for="foto_perfil"><b>Foto de perfil</b></label>
+						<input class="foto" type="file" name="foto_perfil" id="foto_perfil" placeholder="Escriba tu DNI" required>
+					</div>
+					
+				<button type="submit"> <b>Enviar</b> </button>
+					
+				</form>
 			</main>
-			
+		</h2>
+		</div>
+	</div>
 	<%- include("./partials/footer.ejs")%>
 
 </body>
