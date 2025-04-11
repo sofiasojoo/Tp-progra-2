@@ -3,7 +3,7 @@ const productController={
     
     detalle: function(req, res, next) {
         
-        res.render('product');
+        res.render('product', {productoDetalle: productos.productos});
       },
     comentarios: function(req, res, next) {
         let detalleProductoComentarios= []
@@ -13,24 +13,8 @@ const productController={
         res.render('product', { detalleProductoComentarios: detalleProductoComentarios});
       }
       , 
-      profile: function(req, res){
-        let profile= ""
-        res.render('profile', {profile: profile});
-     
-      },
-      register: function(req, res, next) {
-       
-      let form= "formulario registro"
-      res.render('register', {form: form});
-      },
-      login: function(req, res, next) {
-       
-        let formLog= "formulario login"
-        res.render('login', {formLog: formLog});
-        },
       productadd: function(req, res, next) {
        
-          let productAdd= ""
           res.render('product-add', {productAdd: productAdd});
           },
           

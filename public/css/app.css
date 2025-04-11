@@ -182,6 +182,8 @@ font-weight: bold;}
   margin-bottom: 30px;
 }
 
+
+
 .products-title {
   font-size: 2.4em;
   font-weight: bold;
@@ -201,6 +203,7 @@ font-weight: bold;}
   display: block;
 }
 
+
 .product-box_image {
   border-bottom: 1px solid var(--light-gray);
 }
@@ -211,6 +214,7 @@ font-weight: bold;}
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  
 }
 
 .product-box_data h2 {

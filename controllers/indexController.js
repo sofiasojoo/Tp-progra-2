@@ -5,21 +5,22 @@ const indexController={
     res.render('index', {productosHome: productos.productos});
  
   },
-      profile: function(req, res){
-        let profile= ""
-        res.render('profile', {profile: profile});
+  profile: function(req, res){
+        
+        res.render('profile', {profileProductos: productos});
      
       },
-      register: function(req, res, next) {
+  register: function(req, res, next) {
        
       let form= "formulario registro"
       res.render('register', {form: form});
       },
-      login: function(req, res, next) {
+  login: function(req, res, next) {
        
         let formLog= "formulario login"
         res.render('login', {formLog: formLog});
         },
+   
      
 }
 
