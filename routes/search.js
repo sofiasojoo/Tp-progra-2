@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const productos= require("../db/main")
+
 const searchController= require("../controllers/searchController.js")
 
 /* GET home page. */

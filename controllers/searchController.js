@@ -3,8 +3,8 @@ const searchController={
     
     
       search: function(req, res){
-        let profile= ""
-        res.render('profile', {profile: profile});
+        
+        res.render('search-results', {searchProducts: productos.productos});
      
       },
       
