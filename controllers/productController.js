@@ -6,11 +6,8 @@ const productController={
         res.render('product', {productoDetalle: productos.productos});
       },
     comentarios: function(req, res, next) {
-        let detalleProductoComentarios= []
-        detalleProducto.push(productos[id-1].comentarios)
-      
-      
-        res.render('product', { detalleProductoComentarios: detalleProductoComentarios});
+    
+        res.render('product', {detalleProductoComentarios: productos.productos[1].comentarios});
       }
       , 
       productadd: function(req, res, next) {

@@ -14,7 +14,7 @@ const objetoProductos = {
             nombre: "Petal Swirl",
             descripcion: "Este elegante reloj de acero inoxidable tiene una esfera amarilla cepillada al sol con un motivo floral impreso en amarillo claro, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado.",
             comentarios: [{
-                nombres: "",
+                nombres: "pepe",
                 texto: "",
                 imagen: ""
             },]
@@ -24,7 +24,7 @@ const objetoProductos = {
             nombre: "Petal Frenzy",
             descripcion: "Este elegante reloj de acero inoxidable tiene una esfera azul cepillada al sol con un motivo floral impreso en azul claro, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado. ",
             comentarios: [{
-                nombres: "",
+                nombres: "pepe",
                 texto: "",
                 imagen: ""
             },]
@@ -34,7 +34,7 @@ const objetoProductos = {
             nombre: "Petal Bliss",
             descripcion: "Este elegante reloj de acero inoxidable tiene una esfera gris cepillada al sol con un motivo floral impreso en blanco, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado. ",
             comentarios: [{
-                nombres: "",
+                nombres: "pepe",
                 texto: "",
                 imagen: ""
             },]
