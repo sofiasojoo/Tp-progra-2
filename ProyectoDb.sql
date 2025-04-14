@@ -33,6 +33,9 @@ CREATE TABLE producto(
     foreign key (idUsuario) references usuario(idUsuario)
 );
 
+alter table producto
+	modify descProducto varchar(500) not null;
+
 CREATE TABLE comentario(
 	idComentario int unsigned primary key auto_increment,
     comentario varchar(200) not null,
@@ -53,19 +56,51 @@ insert into usuario (idUsuario,nombreUsuario,contrasenia,fechaNacimiento,mail,te
     (default,'Franco Fernandez', 'fer456', '2000/01/01', 'fernando@gmail.com', '91143568635'),
     (default, 'Julieta Ramirez', 'Juli012', '1999/06/05', 'juli@gmail.com', '91112345678');
     
-select * from usuario;
 
 insert into producto (idProducto,nombreProducto,descProducto, idUsuario)
-	values (default,'Petal Swirl','', 5),
-    (default,'Petal Frenzy','',1),
-    (default,'Petal Bliss','',2),
-    (default,'Petal Charm','',3),
-    (default,'Blue Petal Promise','',4),
-    (default,'Pink Petal Promise','',5),
-    (default,'Squarely Berry','',1),
-    (default,'Squarely Blacklight','',2),
-    (default,'Middlesteel','',3),
-    (default,'Pinkaround','',4);
-select * from producto;
+	values (default,'Petal Swirl','Este elegante reloj de acero inoxidable tiene una esfera amarilla cepillada al sol con un motivo floral impreso en amarillo claro, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado.', 5),
+    (default,'Petal Frenzy','Este elegante reloj de acero inoxidable tiene una esfera azul cepillada al sol con un motivo floral impreso en azul claro, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado.',1),
+    (default,'Petal Bliss','Este elegante reloj de acero inoxidable tiene una esfera gris cepillada al sol con un motivo floral impreso en blanco, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado.',2),
+    (default,'Petal Charm','Este elegante reloj de acero inoxidable tiene una esfera rosa cepillada al sol con un motivo floral impreso en blanco, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado.',3),
+    (default,'Blue Petal Promise','Este elegante reloj de acero inoxidable tiene una esfera azul cepillada al sol con un motivo floral impreso en azul claro, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado.',4),
+    (default,'Pink Petal Promise','Este elegante reloj de acero inoxidable tiene una esfera rosa cepillada al sol con un motivo floral impreso en blanco, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado.',5),
+    (default,'Squarely Berry','La caja cuadrada de color rosa oscuro mate de este reloj de Bioceramic está cubierta por un cristal de material de origen biológico de borde a borde que ofrece una vista lateral de la pista de minutos impresa en rosa claro.',1),
+    (default,'Squarely Blacklight','La caja cuadrada de color azul oscuro mate de este reloj de Bioceramic está cubierta por un cristal de material de origen biológico de borde a borde que ofrece una vista lateral de la pista de minutos impresa en azul claro.',2),
+    (default,'Middlesteel','Ni grande, ni pequeño: MIDDLESTEEL (YLS468G) tiene el tamaño perfecto y una esfera verde oscuro con apliques de Swatch y ventana de fecha. El brazalete de acero inoxidable va a juego con la caja.',3),
+    (default,'Pinkaround','Es tiempo de amar con PINKAROUND (YLS455G). La espectacular esfera rosa satinada con impresiones en blanco y gris incluye una ventana que muestra la fecha a las 3 para que no se te olvide nunca tu cita con la persona deseada.',4);
+
 insert into comentario (idComentario,comentario, idUsuario, idProducto)
-	values (default, '', 1, 1)
+	values (default, 'muy buen producto', 1, 1),
+    (default, 'excelente reloj!', 2, 1),
+    (default, 'me encanto!', 3, 1),
+    (default, 'muy buen producto', 1, 2),
+    (default, 'excelente reloj!', 2, 2),
+    (default, 'me encanto', 3, 2),
+    (default, 'muy buen producto', 1, 3),
+    (default, 'excelente reloj', 2, 3),
+    (default, 'me encanto', 3, 3),
+    (default, 'muy buen producto', 1, 3),
+    (default, 'excelente reloj', 2, 3),
+    (default, 'me encanto', 3, 3),
+    (default, 'muy buen producto', 1, 4),
+    (default, 'excelente reloj', 2, 4),
+    (default, 'me encanto', 3, 4),
+    (default, 'muy buen producto', 1, 5),
+    (default, 'excelente reloj', 2, 5),
+    (default, 'me encanto', 3, 5),
+    (default, 'muy buen producto', 1, 6),
+    (default, 'excelente reloj', 2, 6),
+    (default, 'me encanto', 3, 6),
+    (default, 'muy buen producto', 1, 7),
+    (default, 'excelente reloj', 2, 7),
+    (default, 'me encanto', 3, 7),
+    (default, 'muy buen producto', 1, 8),
+    (default, 'excelente reloj', 2, 8),
+    (default, 'me encanto', 3, 8),
+    (default, 'muy buen producto', 1, 9),
+    (default, 'excelente reloj', 2, 9),
+    (default, 'me encanto', 3, 9),
+    (default, 'muy buen producto', 1, 10),
+    (default, 'excelente reloj', 2, 10),
+    (default, 'me encanto', 3, 10);
+    
