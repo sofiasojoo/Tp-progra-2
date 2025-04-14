@@ -69,5 +69,38 @@ insert into producto (idProducto,nombreProducto,descProducto, idUsuario)
     (default,'Middlesteel','Ni grande, ni pequeño: MIDDLESTEEL (YLS468G) tiene el tamaño perfecto y una esfera verde oscuro con apliques de Swatch y ventana de fecha. El brazalete de acero inoxidable va a juego con la caja.',3),
     (default,'Pinkaround','Es tiempo de amar con PINKAROUND (YLS455G). La espectacular esfera rosa satinada con impresiones en blanco y gris incluye una ventana que muestra la fecha a las 3 para que no se te olvide nunca tu cita con la persona deseada.',4);
 
-insert into comentario (idComenproductotario,comentario, idUsuario, idProducto)
-	values (default, '', 1, 1)
+insert into comentario (idComentario,comentario, idUsuario, idProducto)
+	values (default, 'muy buen producto', 1, 1),
+    (default, 'excelente reloj!', 2, 1),
+    (default, 'me encanto!', 3, 1),
+    (default, 'muy buen producto', 1, 2),
+    (default, 'excelente reloj!', 2, 2),
+    (default, 'me encanto', 3, 2),
+    (default, 'muy buen producto', 1, 3),
+    (default, 'excelente reloj', 2, 3),
+    (default, 'me encanto', 3, 3),
+    (default, 'muy buen producto', 1, 3),
+    (default, 'excelente reloj', 2, 3),
+    (default, 'me encanto', 3, 3),
+    (default, 'muy buen producto', 1, 4),
+    (default, 'excelente reloj', 2, 4),
+    (default, 'me encanto', 3, 4),
+    (default, 'muy buen producto', 1, 5),
+    (default, 'excelente reloj', 2, 5),
+    (default, 'me encanto', 3, 5),
+    (default, 'muy buen producto', 1, 6),
+    (default, 'excelente reloj', 2, 6),
+    (default, 'me encanto', 3, 6),
+    (default, 'muy buen producto', 1, 7),
+    (default, 'excelente reloj', 2, 7),
+    (default, 'me encanto', 3, 7),
+    (default, 'muy buen producto', 1, 8),
+    (default, 'excelente reloj', 2, 8),
+    (default, 'me encanto', 3, 8),
+    (default, 'muy buen producto', 1, 9),
+    (default, 'excelente reloj', 2, 9),
+    (default, 'me encanto', 3, 9),
+    (default, 'muy buen producto', 1, 10),
+    (default, 'excelente reloj', 2, 10),
+    (default, 'me encanto', 3, 10);
+    
