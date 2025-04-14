@@ -1,19 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <!-- Include Head -->
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link width="" rel="shortcut icon" href="https://1000logos.net/wp-content/uploads/2017/06/Color-Swatch-Logo.jpg" />
-	
-	<title> Swatch Argentina </title>
-			<!-- Font Awesome Stylesheet -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-	<!-- Bootstrap Grid Stylesheet -->
-	<link rel="stylesheet" href="./css/bootstrap-grid.min.css">
-	<!-- Own Stylesheet -->
-	<link rel="stylesheet" href="./css/app.css">
-</head>
 <body>
 	<!-- Header -->
 	<header class="main-header">
@@ -47,12 +34,12 @@
 			<nav class="main-navbar">
 				<ul class="left-navbar">
 					<li><a href="/">Todos los productos</a></li>
-					<li><a href="/product-add">Cargar productos</a></li>
+					<li><a href="../product-add.ejs">Cargar productos</a></li>
 				</ul>
 	
 				<ul class="right-navbar">
 					<li><a href="/profile">
-							<%= profileProductos.usuario.usuario > %> <i class="fas fa-user"></i>
+						<%= profileProductos.usuario.usuario %> <i class="fas fa-user"></i>
 						</a>
 					</li>
 					<li>

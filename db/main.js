@@ -15,7 +15,7 @@ const objetoProductos = {
             descripcion: "Este elegante reloj de acero inoxidable tiene una esfera amarilla cepillada al sol con un motivo floral impreso en amarillo claro, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado.",
             comentarios: [{
                 nombres: "pepe",
-                texto: "",
+                texto: "muy buen reloj!",
                 imagen: ""
             },]
         },
@@ -25,7 +25,7 @@ const objetoProductos = {
             descripcion: "Este elegante reloj de acero inoxidable tiene una esfera azul cepillada al sol con un motivo floral impreso en azul claro, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado. ",
             comentarios: [{
                 nombres: "pepe",
-                texto: "",
+                texto: "excelente producto",
                 imagen: ""
             },]
         },
@@ -35,7 +35,7 @@ const objetoProductos = {
             descripcion: "Este elegante reloj de acero inoxidable tiene una esfera gris cepillada al sol con un motivo floral impreso en blanco, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado. ",
             comentarios: [{
                 nombres: "pepe",
-                texto: "",
+                texto: "genial!!",
                 imagen: ""
             },]
         },
@@ -44,8 +44,8 @@ const objetoProductos = {
             nombre: "Petal Charm",
             descripcion: "Este elegante reloj de acero inoxidable tiene una esfera rosa cepillada al sol con un motivo floral impreso en blanco, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado.",
             comentarios: [{
-                nombres: "",
-                texto: "",
+                nombres: "pepe",
+                texto: "buen producto",
                 imagen: ""
             },]
         },
@@ -54,8 +54,8 @@ const objetoProductos = {
             nombre: "Blue Petal Promise",
             descripcion: "Este elegante reloj de acero inoxidable tiene una esfera azul cepillada al sol con un motivo floral impreso en azul claro, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado.",
             comentarios: [{
-                nombres: "",
-                texto: "",
+                nombres: "pepe",
+                texto: "excelente, lo recomiendo",
                 imagen: ""
             },]
         },
@@ -64,8 +64,8 @@ const objetoProductos = {
             nombre: "Pink Petal Promise",
             descripcion: "Este elegante reloj de acero inoxidable tiene una esfera rosa cepillada al sol con un motivo floral impreso en blanco, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado.",
             comentarios: [{
-                nombres: "",
-                texto: "",
+                nombres: "pepe",
+                texto: "muy buen servicio",
                 imagen: ""
             },]
         },
@@ -74,8 +74,8 @@ const objetoProductos = {
             nombre: "Squarely Berry",
             descripcion: "La caja cuadrada de color rosa oscuro mate de este reloj de Bioceramic está cubierta por un cristal de material de origen biológico de borde a borde que ofrece una vista lateral de la pista de minutos impresa en rosa claro.",
             comentarios: [{
-                nombres: "",
-                texto: "",
+                nombres: "pepe",
+                texto: "excelente reloj!",
                 imagen: ""
             },]
         },
@@ -84,8 +84,8 @@ const objetoProductos = {
             nombre: "Squarely Blacklight",
             descripcion: "La caja cuadrada de color azul oscuro mate de este reloj de Bioceramic está cubierta por un cristal de material de origen biológico de borde a borde que ofrece una vista lateral de la pista de minutos impresa en azul claro.",
             comentarios: [{
-                nombres: "",
-                texto: "",
+                nombres: "pepe",
+                texto: "me encato!",
                 imagen: ""
             },]
         },
@@ -94,8 +94,8 @@ const objetoProductos = {
             nombre: "Middlesteel",
             descripcion: "Ni grande, ni pequeño: MIDDLESTEEL (YLS468G) tiene el tamaño perfecto y una esfera verde oscuro con apliques de Swatch y ventana de fecha. El brazalete de acero inoxidable va a juego con la caja.",
             comentarios: [{
-                nombres: "",
-                texto: "",
+                nombres: "pepe",
+                texto: "10/10",
                 imagen: ""
             },]
         },
@@ -104,8 +104,8 @@ const objetoProductos = {
             nombre: "Pinkaround",
             descripcion: "Es tiempo de amar con PINKAROUND (YLS455G). La espectacular esfera rosa satinada con impresiones en blanco y gris incluye una ventana que muestra la fecha a las 3 para que no se te olvide nunca tu cita con la persona deseada.",
             comentarios: [{
-                nombres: "",
-                texto: "",
+                nombres: "pepe",
+                texto: "lo recomiendo",
                 imagen: ""
             },]
         },
