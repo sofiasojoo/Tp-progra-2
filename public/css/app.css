@@ -28,7 +28,6 @@ body {
 
 body {
   font-family:Georgia, 'Times New Roman', Times, serif;
-  /*====== cambie el font family======*/
   font-weight: 300;
   background-color: var(--light-gray);
 }
@@ -42,8 +41,6 @@ ol {
 
 a {
   display: inline-block;
- 
-  /*====== borre el text decoration none ======*/
 }
 
 figure {
@@ -56,7 +53,6 @@ img {
 }
 h2{
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  /*====== agegue una tipografia diferente a lso titulos ======*/
 }
 
 input,
@@ -275,6 +271,10 @@ font-weight: bold;}
   box-shadow: 0 0 5px var(--green);
 }
 
+.comments a {
+  color:black ;
+  font-weight: bold;
+}
 
 
 /*====== Footer ======*/
