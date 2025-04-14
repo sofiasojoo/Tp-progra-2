@@ -14,7 +14,7 @@ const objetoProductos = {
             nombre: "Petal Swirl",
             descripcion: "Este elegante reloj de acero inoxidable tiene una esfera amarilla cepillada al sol con un motivo floral impreso en amarillo claro, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado.",
             comentarios: [{
-                nombres: "Pepe",
+                nombres: "Maria",
                 texto: "Excelente diseño y calidad. ¡Estos relojes son perfectos para cualquier ocasión! Me encanta cómo combinan estilo y durabilidad. Definitivamente una gran inversión.",
                 imagen: "/images/users/pexels-photo-415829.webp"
             },]
@@ -24,7 +24,7 @@ const objetoProductos = {
             nombre: "Petal Frenzy",
             descripcion: "Este elegante reloj de acero inoxidable tiene una esfera azul cepillada al sol con un motivo floral impreso en azul claro, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado. ",
             comentarios: [{
-                nombres: "Juan Perez",
+                nombres: "Juana Perez",
                 texto: "La precisión de estos relojes es increíble. ¡Superaron mis expectativas! Además, el acabado es impecable. Se nota el trabajo detallado en cada pieza.",
                 imagen: "/images/users/pexels-photo-762020.webp"
             },]
@@ -34,7 +34,7 @@ const objetoProductos = {
             nombre: "Petal Bliss",
             descripcion: "Este elegante reloj de acero inoxidable tiene una esfera gris cepillada al sol con un motivo floral impreso en blanco, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado. ",
             comentarios: [{
-                nombres: "Pedro Perez",
+                nombres: "Juliana",
                 texto: "Elegantes y funcionales, justo lo que buscaba. La comodidad y el estilo van de la mano. ¡Totalmente recomendados!",
                 imagen: "/images/users/pexels-photo-773371.webp"
             },]
@@ -44,7 +44,7 @@ const objetoProductos = {
             nombre: "Petal Charm",
             descripcion: "Este elegante reloj de acero inoxidable tiene una esfera rosa cepillada al sol con un motivo floral impreso en blanco, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado.",
             comentarios: [{
-                nombres: "Martina Diaz",
+                nombres: "Martin Diaz",
                 texto: "Un reloj que destaca por su originalidad y buen gusto. Perfecto para quienes buscan algo diferente pero con clase. ¡Me encanta!",
                 imagen: "/images/users/pexels-photo-1222271.jpeg"
             },]
@@ -54,7 +54,7 @@ const objetoProductos = {
             nombre: "Blue Petal Promise",
             descripcion: "Este elegante reloj de acero inoxidable tiene una esfera azul cepillada al sol con un motivo floral impreso en azul claro, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado.",
             comentarios: [{
-                nombres: "Franco",
+                nombres: "Franca",
                 texto: "Buena relación calidad-precio. No esperaba tanto por lo que pagué. Son resistentes y lucen mucho más caros de lo que cuestan. ¡Excelente compra!",
                 imagen: "/images/users/pexels-photo-1239291.jpeg"
             },]
@@ -64,7 +64,7 @@ const objetoProductos = {
             nombre: "Pink Petal Promise",
             descripcion: "Este elegante reloj de acero inoxidable tiene una esfera rosa cepillada al sol con un motivo floral impreso en blanco, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado.",
             comentarios: [{
-                nombres: "Fernando",
+                nombres: "Fernanda",
                 texto: "muy buen servicio y excelente calidad de producto, lo volveria a comprar!",
                 imagen: "/images/users/pexels-photo-2104252.webp"
             },]
@@ -74,7 +74,7 @@ const objetoProductos = {
             nombre: "Squarely Berry",
             descripcion: "La caja cuadrada de color rosa oscuro mate de este reloj de Bioceramic está cubierta por un cristal de material de origen biológico de borde a borde que ofrece una vista lateral de la pista de minutos impresa en rosa claro.",
             comentarios: [{
-                nombres: "Juana",
+                nombres: "Juan",
                 texto: "excelente reloj!",
                 imagen: "/images/users/pexels-photo-2128807.jpeg"
             },]
@@ -84,7 +84,7 @@ const objetoProductos = {
             nombre: "Squarely Blacklight",
             descripcion: "La caja cuadrada de color azul oscuro mate de este reloj de Bioceramic está cubierta por un cristal de material de origen biológico de borde a borde que ofrece una vista lateral de la pista de minutos impresa en azul claro.",
             comentarios: [{
-                nombres: "Martina",
+                nombres: "Martin",
                 texto: "Buenísimo por el precio. La correa es cómoda y no se despinta como otros que he tenido. Lo recomiendo.",
                 imagen: "/images/users/pexels-photo-2379005.jpeg"
             },]
@@ -104,7 +104,7 @@ const objetoProductos = {
             nombre: "Pinkaround",
             descripcion: "Es tiempo de amar con PINKAROUND (YLS455G). La espectacular esfera rosa satinada con impresiones en blanco y gris incluye una ventana que muestra la fecha a las 3 para que no se te olvide nunca tu cita con la persona deseada.",
             comentarios: [{
-                nombres: "Cande",
+                nombres: "Pedro",
                 texto: "La pila incluida duró más de lo que pensaba. El diseño es clásico y no pasa de moda, me encantó.",
                 imagen: "/images/users/pexels-photo-3799786.webp"
             },]
