@@ -16,7 +16,7 @@ const objetoProductos = {
             comentarios: [{
                 nombres: "Pepe",
                 texto: "Excelente diseño y calidad. ¡Estos relojes son perfectos para cualquier ocasión! Me encanta cómo combinan estilo y durabilidad. Definitivamente una gran inversión.",
-                imagen: "/public/images/users/pexels-photo-415829.webp"
+                imagen: "/images/users/pexels-photo-415829.webp"
             },]
         },
         {
@@ -26,7 +26,7 @@ const objetoProductos = {
             comentarios: [{
                 nombres: "Juan Perez",
                 texto: "La precisión de estos relojes es increíble. ¡Superaron mis expectativas! Además, el acabado es impecable. Se nota el trabajo detallado en cada pieza.",
-                imagen: "/public/images/users/pexels-photo-762020.webp"
+                imagen: "/images/users/pexels-photo-762020.webp"
             },]
         },
         {
@@ -36,7 +36,7 @@ const objetoProductos = {
             comentarios: [{
                 nombres: "Pedro Perez",
                 texto: "Elegantes y funcionales, justo lo que buscaba. La comodidad y el estilo van de la mano. ¡Totalmente recomendados!",
-                imagen: "/public/images/users/pexels-photo-773371.webp"
+                imagen: "/images/users/pexels-photo-773371.webp"
             },]
         },
         {
@@ -46,7 +46,7 @@ const objetoProductos = {
             comentarios: [{
                 nombres: "Martina Diaz",
                 texto: "Un reloj que destaca por su originalidad y buen gusto. Perfecto para quienes buscan algo diferente pero con clase. ¡Me encanta!",
-                imagen: "/public/images/users/pexels-photo-1222271.jpeg"
+                imagen: "/images/users/pexels-photo-1222271.jpeg"
             },]
         },
         {
@@ -56,7 +56,7 @@ const objetoProductos = {
             comentarios: [{
                 nombres: "Franco",
                 texto: "Buena relación calidad-precio. No esperaba tanto por lo que pagué. Son resistentes y lucen mucho más caros de lo que cuestan. ¡Excelente compra!",
-                imagen: "/public/images/users/pexels-photo-1239291.jpeg"
+                imagen: "/images/users/pexels-photo-1239291.jpeg"
             },]
         },
         {
@@ -66,7 +66,7 @@ const objetoProductos = {
             comentarios: [{
                 nombres: "Fernando",
                 texto: "muy buen servicio y excelente calidad de producto, lo volveria a comprar!",
-                imagen: "/public/images/users/pexels-photo-2104252.webp"
+                imagen: "/images/users/pexels-photo-2104252.webp"
             },]
         },
         {
@@ -76,7 +76,7 @@ const objetoProductos = {
             comentarios: [{
                 nombres: "Juana",
                 texto: "excelente reloj!",
-                imagen: "/public/images/users/pexels-photo-2128807.jpeg"
+                imagen: "/images/users/pexels-photo-2128807.jpeg"
             },]
         },
         {
@@ -86,7 +86,7 @@ const objetoProductos = {
             comentarios: [{
                 nombres: "Martina",
                 texto: "Buenísimo por el precio. La correa es cómoda y no se despinta como otros que he tenido. Lo recomiendo.",
-                imagen: "/public/images/users/pexels-photo-2379005.jpeg"
+                imagen: "/images/users/pexels-photo-2379005.jpeg"
             },]
         },
         {
@@ -96,7 +96,7 @@ const objetoProductos = {
             comentarios: [{
                 nombres: "Pepe",
                 texto: "Justo lo que buscaba: simple pero elegante. Va perfecto para el día a día y para ocasiones más formales.",
-                imagen: "/public/images/users/pexels-photo-2380795.jpeg"
+                imagen: "/images/users/pexels-photo-2380795.jpeg"
             },]
         },
         {
@@ -106,7 +106,7 @@ const objetoProductos = {
             comentarios: [{
                 nombres: "Cande",
                 texto: "La pila incluida duró más de lo que pensaba. El diseño es clásico y no pasa de moda, me encantó.",
-                imagen: "/public/images/users/pexels-photo-3799786.webp"
+                imagen: "/images/users/pexels-photo-3799786.webp"
             },]
         },
     ]
