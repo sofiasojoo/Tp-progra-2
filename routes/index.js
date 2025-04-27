@@ -23,5 +23,3 @@ router.get("/profile", indexController.profile)
 
 module.exports = router;
 
-// consultar cuales son las rutas que hay que 
-//hacer, no se termina de entender la consigna
