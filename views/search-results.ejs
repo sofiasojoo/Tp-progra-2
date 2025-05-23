@@ -19,16 +19,20 @@
 				<% for (let i = 0; i <searchProducts.length; i++) { %>
 					<div class="col-12 col-sm-6 col-lg-3">
 					<section class="product-box">
-						<a href="/products/id/2"> 
+						<a href="/products/id/<%= searchProducts[i].id %>"> <!-- No se si hay que borrar el /id o no -->
 							<figure class="product-box_image">
 								<img src="<%=searchProducts[i].imagen%>" alt="">
 							</figure>
 							<article class="product-box_data">
-								<h2> <a href="/products/id/2"> <%=searchProducts[i].nombre%> </a></h2>
+								<h2> <a href="/products/id/<%= searchProducts[i].id %>"> <%=searchProducts[i].nombre%> </a></h2> <!-- No se si hay que borrar el /id o no -->
 								<p> <%=searchProducts[i].descripcion%> </p>
 								<p>Comentarios: <%=searchProducts[i].comentarios.length%> </p>
 
 							</article>
+							<p>Publicado por:<a href="/users/<%= searchProducts[i].usuario.id %>"> <%= searchProducts[i].usuario.nombre %>
+								</a>
+							  </p>
+							  
 						</a>
 					</section>
 					</div>
