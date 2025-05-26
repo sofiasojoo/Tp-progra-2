@@ -39,10 +39,7 @@ let usersController = {
         User.findOne(
             {where: [{mail: req.body.email}]}
         )
-        .then(function(usuario){
-
-            console.log(usuario);
-            
+        .then(function(usuario){            
 
             if (usuario != undefined){
                 
@@ -52,12 +49,8 @@ let usersController = {
                     req.session.usuario = usuario
                        
                 if (req.body.recordarme != undefined){
-                    console.log("ESTOY ENTRANDO ACA en la cookie?");
-                    res.cookie('user',usuario,{ maxAge: 1000 * 60 * 5});
-                    
+                    res.cookie('user',usuario,{ maxAge: 1000 * 60 * 5});  
                 }
-
-                console.log("ESTOY ENTRANDO antes del redirect");
                 
                     return res.redirect("/")
                 }else {
@@ -66,7 +59,6 @@ let usersController = {
             }else{
                 res.send("el mail no existe ")
             }
-
             
           ;
     }).catch(function(error){
