@@ -7,22 +7,22 @@ module.exports = function(sequelize, dataTypes){
             type: dataTypes.INTEGER,
         },
         nombreUsuario:{
-            type: dataTypes.VARCHAR(30),
+            type: dataTypes.STRING(30),
         },
         contrasenia:{
-            type: dataTypes.VARCHAR(15),
+            type: dataTypes.STRING(250),
         },
         fechaNacimiento:{
             type: dataTypes.DATE,
         },
         mail:{
-            type: dataTypes.VARCHAR(30),
+            type: dataTypes.STRING(30),
         },
         telefono:{
             type: dataTypes.INTEGER,
         },
         fotoPerfil:{
-            type: dataTypes.VARCHAR(100),
+            type: dataTypes.STRING(100),
         },
         createdAt: {
             type: dataTypes.DATE,
@@ -42,12 +42,12 @@ module.exports = function(sequelize, dataTypes){
     let User = sequelize.define(alias, cols, config);
     User.associate= function(models){
         User.hasMany(models.Producto,{
-            as: "producto",
+            as: "productos",
             foreignKey: "idProducto"
         });
 
         User.hasMany(models.Comentario,{
-            as: "comentario",
+            as: "comentarios",
             foreignKey: "idComentario"
         });
     }

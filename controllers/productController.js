@@ -1,4 +1,5 @@
-const productos = require("../db/main")
+const db = require("../database/models")
+let productos = db.Producto
 const productController={
     
     detalle: function(req, res, next) {

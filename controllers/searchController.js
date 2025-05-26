@@ -1,5 +1,5 @@
 const productos = require("../db/main")
-let db = require("../db/models");
+let db = require("../database/models");
 let Search= db.productos
 let op = db.Sequelize.Op;
 const searchController={

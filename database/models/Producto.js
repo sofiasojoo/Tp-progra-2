@@ -10,13 +10,13 @@ module.exports = function(sequelize, dataTypes){
             type: dataTypes.INTEGER,
         },
         nombreProducto:{
-            type: dataTypes.VARCHAR(20),
+            type: dataTypes.STRING(20),
         },
         fotoProducto:{
-            type: dataTypes.VARCHAR(100),
+            type: dataTypes.STRING(100),
         },
         descProducto:{
-            type: dataTypes.VARCHAR(500),
+            type: dataTypes.STRING(500),
         },
         createdAt: {
             type: dataTypes.DATE,
@@ -39,7 +39,7 @@ module.exports = function(sequelize, dataTypes){
    let Producto = sequelize.define(alias, cols, config);
    Producto.associate= function(models){
        Producto.belongsTo(models.User,{
-           as: "usuario",
+           as: "usuarios",
            foreignKey: "idUsuario"
        });
        Producto.hasMany(models.Comentario,{

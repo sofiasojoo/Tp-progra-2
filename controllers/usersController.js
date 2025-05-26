@@ -4,60 +4,37 @@ const User = db.User
 
 let usersController = {
     create: function(req, res){
-        User.create({
-            name: req.body.name,
-            email: req.body.email,
-            password: req.body.password,
-        })
-        .then(function(User){
-            return res.redirect('/');
-        })
-        .catch(function (error){
-            res.send(error);
-        })
-        ;
-    },
-
-    emailRegister: function(req,res){
+       if (req.body.email == ""){
+        return res.send("completar el email")
+       }
+       if (req.body.password.length < 3 || req.body.password == ""){
+        return res.send("La password es muy corta o esta vacia") 
+       }
         User.findOne(
-            {where: [{email: req.body.email}]}
-        )
-        .then(function(usuario){
-            console.log(usuario);
-
-            if (email != undefined) {
-                res.send("El email ya esta registrado") 
-            } 
-            if (email == ""){
-                res.send("El campo de email se encuentra vacio") 
-            }    
-        })
-        .catch(function(error){
-            return res.send(error);
-        })    
-    },
-
-    passwordRegister: function(req,res){
-        User.findOne(
-            {where: [{password: req.body.password}]}
-        )
-        .then(function(usuario){
-            console.log(usuario);
-
-            if (req.body.password.length < 3) {
-                req.body.password = bcrypt.hashSync(req.body.password, 10) 
-            } 
-            else{
-                res.send("La password es muy corta") 
+            {where: [{mail: req.body.email}]}
+        ).then(function(user){
+            if(user != null){
+                return res.send("El email ya esta registrado") 
             }
-            if (req.body.password == ""){
-                res.send("El campo de password se encuentra vacio") 
-            }    
+            User.create({
+                nombreUsuario: req.body.usuario,
+                mail: req.body.email,
+                contrasenia: bcrypt.hashSync(req.body.password, 10),
+                fechaNacimiento: req.body.fecha_nacimiento,
+            })
+            .then(function(User){
+                return res.redirect('/');
+            })
+            .catch(function (error){
+                res.send(error);
+            })
+            ;
+        }).catch(function(error){
+            console.log(error)
         })
-        .catch(function(error){
-            return res.send(error);
-        }) 
+       
     },
+
     
     login: function(req, res){
         if(req.session.usuario != undefined ){

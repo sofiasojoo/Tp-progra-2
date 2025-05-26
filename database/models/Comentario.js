@@ -7,7 +7,7 @@ module.exports = function(sequelize, dataTypes){
             type: dataTypes.INTEGER,
         },
         comentario:{
-            type: dataTypes.VARCHAR(200),
+            type: dataTypes.STRING(200),
         },
         idUsuario:{
             type: dataTypes.INTEGER,
@@ -34,11 +34,11 @@ module.exports = function(sequelize, dataTypes){
     let Comentario = sequelize.define(alias, cols, config);
     Comentario.associate= function(models){
         Comentario.belongsTo(models.Producto,{
-            as: "producto",
+            as: "productos",
             foreignKey: "idProducto"
         });
         Comentario.belongsTo(models.User,{
-            as: "usuario",
+            as: "usuarios",
             foreignKey: "idUsuario"
         });
     }
