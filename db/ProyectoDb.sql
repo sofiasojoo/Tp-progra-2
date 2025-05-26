@@ -1,10 +1,11 @@
-CREATE SCHEMA proyecto;
-USE proyecto;
+DROP SCHEMA proyecto_db ;
+CREATE SCHEMA proyecto_db;
+USE proyecto_db;
 
-CREATE TABLE usuario(
+CREATE TABLE usuarios(
 	idUsuario int unsigned primary key auto_increment,
     nombreUsuario varchar(30) not null,
-    contrasenia varchar(15) not null,
+    contrasenia varchar(250) not null,
     fechaNacimiento date not null,
     mail varchar(30) not null,
     telefono bigint,
@@ -12,12 +13,11 @@ CREATE TABLE usuario(
     
 	createdAt timestamp default current_timestamp,
 	updatedAt timestamp default current_timestamp on update current_timestamp,
-	deletedAt timestamp null on update current_timestamp,
-	foreign key (idProducto) references producto(idProducto),
-	foreign key (idComentario) references producto(idComentario)
+	deletedAt timestamp null on update current_timestamp
+	
 );
     
-CREATE TABLE producto(
+CREATE TABLE productos(
 	idProducto int unsigned primary key auto_increment,
     idUsuario int unsigned,
     nombreProducto varchar(20) not null,
@@ -27,10 +27,10 @@ CREATE TABLE producto(
     createdAt timestamp default current_timestamp,
     updatedAt timestamp default current_timestamp on update current_timestamp,
     deletedAt timestamp null on update current_timestamp,
-    foreign key (idUsuario) references usuario(idUsuario)
+    foreign key (idUsuario) references usuarios(idUsuario)
 );
 
-CREATE TABLE comentario(
+CREATE TABLE comentarios(
 	idComentario int unsigned primary key auto_increment,
     comentario varchar(200) not null,
     idUsuario int unsigned,
@@ -40,11 +40,11 @@ CREATE TABLE comentario(
     updatedAt timestamp default current_timestamp on update current_timestamp,
     deletedAt timestamp null on update current_timestamp,
     
-    foreign key (idUsuario) references usuario(idUsuario),
-    foreign key (idProducto) references producto(idProducto)
+    foreign key (idUsuario) references usuarios(idUsuario),
+    foreign key (idProducto) references productos(idProducto)
 );
 
-insert into usuario (nombreUsuario,contrasenia,fechaNacimiento,mail,telefono)
+insert into usuarios (nombreUsuario,contrasenia,fechaNacimiento,mail,telefono)
 	values ('Francesco Scaglioni', 'fran123', '2002-04-27', 'francesco@gmail.com', 91169829261),
 	('Juan Perez', 'juan123', '1996-01-01', 'juan@gmail.com', '91176568987'),
     ('Martina Diaz', 'mar321', '2004-12-31', 'martina@gmail.com', '91182933434'),
@@ -52,7 +52,7 @@ insert into usuario (nombreUsuario,contrasenia,fechaNacimiento,mail,telefono)
     ('Julieta Ramirez', 'Juli012', '1999-06-05', 'juli@gmail.com', '91112345678');
     
 
-insert into producto (nombreProducto,descProducto, idUsuario)
+insert into productos (nombreProducto,descProducto, idUsuario)
 	values ('Petal Swirl','Este elegante reloj de acero inoxidable tiene una esfera amarilla cepillada al sol con un motivo floral impreso en amarillo claro, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado.', 5),
     ('Petal Frenzy','Este elegante reloj de acero inoxidable tiene una esfera azul cepillada al sol con un motivo floral impreso en azul claro, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado.',1),
     ('Petal Bliss','Este elegante reloj de acero inoxidable tiene una esfera gris cepillada al sol con un motivo floral impreso en blanco, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado.',2),
@@ -64,7 +64,7 @@ insert into producto (nombreProducto,descProducto, idUsuario)
     ('Middlesteel','Ni grande, ni pequeño: MIDDLESTEEL (YLS468G) tiene el tamaño perfecto y una esfera verde oscuro con apliques de Swatch y ventana de fecha. El brazalete de acero inoxidable va a juego con la caja.',3),
     ('Pinkaround','Es tiempo de amar con PINKAROUND (YLS455G). La espectacular esfera rosa satinada con impresiones en blanco y gris incluye una ventana que muestra la fecha a las 3 para que no se te olvide nunca tu cita con la persona deseada.',4);
 
-insert into comentario (comentario, idUsuario, idProducto)
+insert into comentarios (comentario, idUsuario, idProducto)
 	values ('muy buen producto', 1, 1),
     ('excelente reloj!', 2, 1),
     ('me encanto!', 3, 1),
@@ -98,4 +98,3 @@ insert into comentario (comentario, idUsuario, idProducto)
     ('muy buen producto', 1, 10),
     ('excelente reloj', 2, 10),
     ('me encanto', 3, 10);
-    
