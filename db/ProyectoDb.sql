@@ -12,7 +12,9 @@ CREATE TABLE usuario(
     
 	createdAt timestamp default current_timestamp,
 	updatedAt timestamp default current_timestamp on update current_timestamp,
-	deletedAt timestamp null on update current_timestamp
+	deletedAt timestamp null on update current_timestamp,
+	foreign key (idProducto) references producto(idProducto),
+	foreign key (idComentario) references producto(idComentario)
 );
     
 CREATE TABLE producto(

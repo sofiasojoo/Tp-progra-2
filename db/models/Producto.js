@@ -1,0 +1,52 @@
+module.exports = function(sequelize, dataTypes){
+    let alias = "Producto"
+    let cols = {
+        idProducto:{
+            autoIncrement: true,
+            primaryKey: true,
+            type: dataTypes.INTEGER,
+        },
+        idUsuario:{
+            type: dataTypes.INTEGER,
+        },
+        nombreProducto:{
+            type: dataTypes.VARCHAR(20),
+        },
+        fotoProducto:{
+            type: dataTypes.VARCHAR(100),
+        },
+        descProducto:{
+            type: dataTypes.VARCHAR(500),
+        },
+        createdAt: {
+            type: dataTypes.DATE,
+        },
+        updatedAt: {
+            type: dataTypes.DATE,
+        },
+        deletedAt: {
+            type: dataTypes.DATE,
+        },
+    }
+
+    let config = {
+        tableName : "usuario",
+        timestamps:false, //Indica al modelo si debe buscar los campos createdAt y updatedAt en la tabla. Si están en la tabla no es necesario declararlos en la lista de campos.
+        // Si en la tabla están con guión bajo hay que usar la propiedad underscore.
+        // underscored: false, //Indica al modelo que si loscampos de timestamp en la tabla usan o no guiones bajos en lugar de camelCase.
+    }
+
+   let Producto = sequelize.define(alias, cols, config);
+   Producto.associate= function(models){
+       Producto.belongsTo(models.User,{
+           as: "usuario",
+           foreignKey: "idUsuario"
+       });
+       Producto.hasMany(models.Comentario,{
+        as: "comentarios",
+        foreignKey: "idComentario"
+    });
+   }
+
+   return Producto;
+}

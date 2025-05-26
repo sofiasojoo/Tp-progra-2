@@ -58,29 +58,49 @@ let usersController = {
             return res.send(error);
         }) 
     },
-
+    
     login: function(req, res){
-        User.findAll(
+        if(req.session.usuario != undefined ){
+            return res.redirect('/')
+        } else {
+            return res.render('login');
+        }  
+    },
+
+    processLogin: function(req,res){
+        User.findOne(
             {where: [{email: req.body.email}]}
         )
         .then(function(usuario){
-            if(req.session.email == email ){
-                return res.redirect('/')
-            } else {
-                res.send("El usuario no existe") 
-            }     
+            console.log(usuario);
+            if (usuario != undefined) {
+                const comparacion = bcrypt.compareSync(req.body.password, usuario.password)
+                if (comparacion == true){
+                    req.session.usuario = usuario
+                       
+                if (req.body.recordarme !=undefined){
+                    res.cookie('user',usuario,{ maxAge: 1000 * 60 * 5});
+                }
+                    res.redirect("/")
+                }else {
+                    res.send("la password es incorrecta")
+                } 
+            }else {
+                res.send("no se encontro ese usuario")
+            }
+              
         })
         .catch(function(error){
             return res.send(error);
-        }) 
+        })      
     },
-                    
-    
+
     logout: function(req,res){
         req.session.destroy();
         res.clearCookie('email');
         res.redirect("/")
-        //Procesamos el logout destruyendo la sesión y eliminando la cookie.
     }
 
   };
+
+  module.exports = usersController;
