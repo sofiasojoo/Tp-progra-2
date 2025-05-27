@@ -1,6 +1,6 @@
 const productos = require("../db/main")
 let db = require("../database/models");
-let Search= db.productos
+let Search= db.Producto
 let op = db.Sequelize.Op;
 const searchController={
     
@@ -8,10 +8,10 @@ const searchController={
       search: function(req, res){
         
         Search.findAll({
-          where: [{ title: {[op.like]: `%${req.query.search}%`} }], 
+          where: [{ nombreProducto: {[op.like]: `%${req.query.search}%`} }], 
           include:[
-            {association: "productos"},
-            {association: "user"}
+            {association: "comentarios"},
+            {association: "usuarios"}
         ]
           }
           )
@@ -19,7 +19,7 @@ const searchController={
        if(resultados.length == 0){
         res.send("No hay resultados para su criterio de búsqueda")
        }else{
-        res.render('search-results', {searchProducts: productos.productos});}
+        res.render('search-results', {searchProducts: resultados});}
       })
       .catch(function(error){
           return res.send(error);

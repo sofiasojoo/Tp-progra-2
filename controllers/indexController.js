@@ -1,9 +1,21 @@
-const productos = require("../db/main")
+const db = require("../database/models")
+const productos= db.producto
 const indexController={
   index: function(req, res){
     
-    res.render('index', {productosHome: productos.productos});
- 
+    db.Producto.findAll({
+      include: ["comentarios"] 
+    })
+      .then(function(productos)  {
+        console.log(productos);
+        res.render("index", { productosHome: productos });
+        
+        
+      })
+      .catch(error => {
+        return res.send( error );
+      });
+    
   },
   profile: function(req, res){
         

@@ -3,8 +3,21 @@ let productos = db.Producto
 const productController={
     
     detalle: function(req, res, next) {
+       
         
-        res.render('product', {productoDetalle: productos.productos});
+            let idProducto = req.params.id;
+          
+            db.Producto.findByPk(idProducto, {
+              include: [{ association: "comentarios" }]
+            })
+              .then(function(producto){
+                res.render('product', { productoDetalle: producto });
+              })
+              .catch(error => {
+                return res.send(error)
+              });
+            
+          
       }
       , 
       productadd: function(req, res, next) {

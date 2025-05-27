@@ -24,13 +24,13 @@
 				<% for (let i = 0; i <productosHome.length; i++) { %>
 					<div class="col-12 col-sm-6 col-lg-3">
 						<section class="product-box">
-							<a href="/products/id/2"> 
+							<a href="/products/id/<%=productosHome[i].idProducto%>"> 
 								<figure class="product-box_image">
-									<img src="<%=productosHome[i].imagen%>" alt="">
+									<img src="/images/products/<%=productosHome[i].fotoProducto%>" alt="">
 								</figure>
 								<article class="product-box_data">
-									<h2> <a href="/products/id/2"> <%=productosHome[i].nombre%> </a></h2>
-									<p> <%=productosHome[i].descripcion%> </p>
+									<h2> <a href="/products/id/<%=productosHome[i].idProducto%>"> <%=productosHome[i].nombreProducto%> </a></h2>
+									<p> <%=productosHome[i].descProducto%> </p>
 									<p>Comentarios: <%=productosHome[i].comentarios.length%> </p>
 
 								</article>
