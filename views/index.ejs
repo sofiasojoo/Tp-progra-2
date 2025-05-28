@@ -5,7 +5,13 @@
 
 <body>
 	
-	<%- include("./partials/header.ejs")%>
+	<% if (usuario) { %>
+		<%- include('partials/headerLogueado.ejs') %>
+	  <% } else { %>
+		<%- include('partials/header.ejs') %>
+	  <% } %>
+	  
+
 	
 	<!-- Banner -->
 	<div class="banner">

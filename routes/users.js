@@ -8,6 +8,8 @@ router.get('/', function(req, res, next) {
 
 
 });
+router.get('/register', usersController.create);
+router.get('/login', usersController.login);
 router.post('/newuser/', usersController.create);
 router.post('/olduser/', usersController.login);
 

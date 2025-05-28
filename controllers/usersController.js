@@ -14,7 +14,8 @@ let usersController = {
             {where: [{mail: req.body.email}]}
         ).then(function(user){
             if(user != null){
-                return res.send("El email ya esta registrado") 
+                 res.send("El email ya esta registrado") // por ahora anda
+                 return res.redirect('/profile'); // esto no anda y lo puedo arreglar pero hay que preguntar bien que pide la consigna 
             }
             User.create({
                 nombreUsuario: req.body.usuario,

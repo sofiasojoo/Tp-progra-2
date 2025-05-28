@@ -27,7 +27,13 @@ app.use(session( { secret: "Nuestro mensaje secreto",
   resave: false,
   saveUninitialized: true }));
 
+  app.use(function(req, res, next){
+    res.locals.usuario = req.session.usuario;
+    console.log('Usuario en locals:', res.locals.usuario);
+    next();
+});
 
+  
 
 app.use(function (req, res, next) {
   if (req.session.usuario != undefined) {

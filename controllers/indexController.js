@@ -1,7 +1,10 @@
 const db = require("../database/models")
-const productos= db.producto
+
+const User= db.User
+let bcrypt = require ('bcryptjs');
+
 const indexController={
-  index: function(req, res){
+ index: function(req, res){
     
     db.Producto.findAll({
       include: ["comentarios"] 
@@ -11,27 +14,43 @@ const indexController={
         res.render("index", { productosHome: productos });
         
         
-      })
-      .catch(error => {
-        return res.send( error );
-      });
+      }).catch(function(error){
+        return res.send(error);
+    })
     
   },
-  profile: function(req, res){
-        
-        res.render('profile', {profileProductos: productos});
+ 
+  profile: function(req, res) {
+    User.findByPk(req.params.id, {
+      include: ['productos']
+    })
+          .then(function(usuario) {
+              res.render('profile', { usuario });
+          })
+        .catch(function(error){
+          return res.send(error);
+      })
+  
+  
      
       },
-  register: function(req, res, next) {
-       
-      let form= "formulario registro"
-      res.render('register', {form: form});
-      },
-  login: function(req, res, next) {
-       
-        let formLog= "formulario login"
-        res.render('login', {formLog: formLog});
-        },
+
+
+  login: function(req, res) {
+        return res.render("login");
+    },
+  
+    register: function(req, res) {
+      return res.render("register");
+  },
+
+ 
+  logout: function(req, res, next) {
+    req.session.destroy();
+    res.clearCookie("user");
+    res.redirect("/")
+    
+    },
    
      
 }
