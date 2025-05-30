@@ -26,9 +26,8 @@
 
 				<div>
 					<ul class="">
-						<li>8 productos</li>
-						<li>200 seguidores</li>
-						<li>300 comentarios</li>
+						<p>Total de productos: <%= usuario.productos.length %></p>
+
 					</ul>
 				</div>
 			</div>
@@ -46,12 +45,12 @@
 				<% for (let i = 0; i <usuario.productos.length; i++) { %>	
 					<div class="col-12 col-sm-6 col-lg-3">
 					<section class="product-box">
-						<a href="/products/id/2"> 
+						<a href="/products/id/<%=usuario.productos[i].idProducto%>"> 
 							<figure class="product-box_image">
 								<img src="<%=usuario.productos[i].fotoProducto%>" alt="">
 							</figure>
 							<article class="product-box_data">
-								<h2> <a href="/products/id/2"> <%=usuario.productos[i].nombreProducto%> </a></h2>
+								<h2> <a href="/products/id/<%=usuario.productos[i].idProducto%>"> <%=usuario.productos[i].nombreProducto%> </a></h2>
 								<p> <%=usuario.productos[i].descProducto%> </p>
 								
 								
