@@ -8,7 +8,7 @@ const productController={
             let idProducto = req.params.id;
           
             db.Producto.findByPk(idProducto, {
-              include: [{ association: "comentarios" }]
+              include: [{ association: "comentario" }]
             })
               .then(function(producto){
                 res.render('product', { productoDetalle: producto });
@@ -32,8 +32,8 @@ const productController={
   })
     .then(function(){
                 res.redirect('/login');
-              })
-              .catch(function(error){
+      })
+    .catch(function(error){
                 return res.send(error);
       })
 }

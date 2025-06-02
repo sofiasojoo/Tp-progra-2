@@ -17,7 +17,7 @@
 			<!-- Show the "ultimos" products -->
 			<h2 class="col-12"> 
 			<main class="register">
-				<form class="form_register" action="/users/newuser" method="post" >
+				<form class="form_register" action="/newuser" method="post" >
 					<div>
 						<label for="usuario"><b>Nombre de usuario</b></label>
 						<input type="text" name="usuario" id="usuario" placeholder="Escriba tu usuario" required>
@@ -40,7 +40,7 @@
 					</div>
 					<div>
 						<label for="foto_perfil"><b>Foto de perfil</b></label>
-						<input type="text" name="foto_perfil" id="foto_perfil" placeholder="Escriba la ruta de la foto" required>
+						<input type="file" name="foto_perfil" id="foto_perfil" required>
 					</div>
 					
 				<button type="submit"> <b>Enviar</b> </button>

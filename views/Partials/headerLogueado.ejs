@@ -33,21 +33,17 @@
 	
 			<nav class="main-navbar">
 				<ul class="left-navbar">
-					<li><a href="" class="saludo">Hola <%= usuario.nombreUsuario %>!</a></li>
 					<li><a href="/">Todos los productos</a></li>
-					<li><a href="/products/product-add">Agregar productos</a></li>
+					<li><a href="/productadd">Agregar productos</a></li>
 				</ul>
 	
 				<ul class="right-navbar">
-					<li><a href="/profile/<%= usuario.idUsuario %>">
-
-						Mi perfil <i class="fas fa-user"></i>
-						</a>
+					<li><a href="/profile/<%= usuario.idUsuario %>" class="saludo">Hola <%= usuario.nombreUsuario %> <i class="fas fa-user"></i></a>
 					</li>
 					<li>
-						<form action="" method="get">
+						<form action="/logout" method="get">
 							<button class="logout" type="submit">
-								Cerrar sesión <i class="fas fa-sign-in-alt"></i>
+								<b>Cerrar sesión</b> <i class="fas fa-sign-in-alt"></i>
 							</button>
 						</form>
 					</li>

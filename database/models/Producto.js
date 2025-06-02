@@ -6,9 +6,6 @@ module.exports = function(sequelize, dataTypes){
             primaryKey: true,
             type: dataTypes.INTEGER,
         },
-        idUsuario:{
-            type: dataTypes.INTEGER,
-        },
         nombreProducto:{
             type: dataTypes.STRING(20),
         },

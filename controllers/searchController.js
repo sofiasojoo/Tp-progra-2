@@ -10,8 +10,8 @@ const searchController={
         Search.findAll({
           where: [{ nombreProducto: {[op.like]: `%${req.query.search}%`} }], 
           include:[
-            {association: "comentarios"},
-            {association: "usuarios"}
+            {association: "comentario"},
+            {association: "usuario"}
         ]
           }
           )

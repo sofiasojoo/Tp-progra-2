@@ -10,11 +10,12 @@ const indexController= require("../controllers/indexController")
 
 router.get('/', indexController.index);
 router.get('/login', indexController.login);
+router.post('/olduser/', indexController.login2);
 router.get('/register', indexController.register);
+router.post('/newuser', indexController.create);
 router.get("/profile/:id", indexController.profile)
 router.get('/logout', indexController.logout);
-
-
+router.get('/productadd', indexController.productadd);
 
 
 
