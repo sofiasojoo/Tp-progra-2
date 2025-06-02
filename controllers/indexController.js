@@ -12,7 +12,6 @@ const indexController={
 
     })
       .then(function(productos)  {
-        console.log(productos);
         res.render("index", { productosHome: productos });
         
         

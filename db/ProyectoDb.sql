@@ -1,4 +1,4 @@
-DROP SCHEMA proyecto_db ;
+DROP SCHEMA proyecto_db;
 CREATE SCHEMA proyecto_db;
 USE proyecto_db;
 
@@ -53,16 +53,16 @@ insert into usuarios (nombreUsuario,contrasenia,fechaNacimiento,mail,telefono, f
     
 
 insert into productos (nombreProducto, fotoProducto, descProducto, idUsuario)
-	values ('Petal Swirl', 'https://static.swatch.com/images/product/YLS236G/sa200/YLS236G_sa200_er005.png','Este elegante reloj de acero inoxidable tiene una esfera amarilla cepillada al sol con un motivo floral impreso en amarillo claro, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado.', 5),
-    ('Petal Frenzy', 'https://static.swatch.com/images/product/YLS235G/sa200/YLS235G_sa200_er005.png', 'Este elegante reloj de acero inoxidable tiene una esfera azul cepillada al sol con un motivo floral impreso en azul claro, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado.',1),
-    ('Petal Bliss', 'https://static.swatch.com/images/product/YLS237G/sa200/YLS237G_sa200_er005.png','Este elegante reloj de acero inoxidable tiene una esfera gris cepillada al sol con un motivo floral impreso en blanco, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado.',2),
-    ('Petal Charm', 'https://static.swatch.com/images/product/YLS234G/sa200/YLS234G_sa200_er005.png','Este elegante reloj de acero inoxidable tiene una esfera rosa cepillada al sol con un motivo floral impreso en blanco, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado.',3),
-    ('Blue Petal Promise', 'https://static.swatch.com/images/product/YLS235/sa200/YLS235_sa200_er005.png','Este elegante reloj de acero inoxidable tiene una esfera azul cepillada al sol con un motivo floral impreso en azul claro, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado.',4),
-    ('Pink Petal Promise', 'https://static.swatch.com/images/product/YLS234/sa200/YLS234_sa200_er005.png','Este elegante reloj de acero inoxidable tiene una esfera rosa cepillada al sol con un motivo floral impreso en blanco, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado.',5),
-    ('Squarely Berry', 'https://static.swatch.com/images/product/SO34R700/sa200/SO34R700_sa200_er005.png','La caja cuadrada de color rosa oscuro mate de este reloj de Bioceramic está cubierta por un cristal de material de origen biológico de borde a borde que ofrece una vista lateral de la pista de minutos impresa en rosa claro.',1),
-    ('Squarely Blacklight', 'https://static.swatch.com/images/product/SO34N700/sa200/SO34N700_sa200_er005.png','La caja cuadrada de color azul oscuro mate de este reloj de Bioceramic está cubierta por un cristal de material de origen biológico de borde a borde que ofrece una vista lateral de la pista de minutos impresa en azul claro.',2),
-    ('Middlesteel', 'https://static.swatch.com/images/product/YLS468G/sa200/YLS468G_sa200_er005.png','Ni grande, ni pequeño: MIDDLESTEEL (YLS468G) tiene el tamaño perfecto y una esfera verde oscuro con apliques de Swatch y ventana de fecha. El brazalete de acero inoxidable va a juego con la caja.',3),
-    ('Pinkaround', 'https://static.swatch.com/images/product/YLS455G/sa200/YLS455G_sa200_er005.png','Es tiempo de amar con PINKAROUND (YLS455G). La espectacular esfera rosa satinada con impresiones en blanco y gris incluye una ventana que muestra la fecha a las 3 para que no se te olvide nunca tu cita con la persona deseada.',4);
+	values ('Petal Swirl', 'Reloj1.png','Este elegante reloj de acero inoxidable tiene una esfera amarilla cepillada al sol con un motivo floral impreso en amarillo claro, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado.', 5),
+    ('Petal Frenzy', 'Reloj2.png', 'Este elegante reloj de acero inoxidable tiene una esfera azul cepillada al sol con un motivo floral impreso en azul claro, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado.',1),
+    ('Petal Bliss', 'Reloj3.png','Este elegante reloj de acero inoxidable tiene una esfera gris cepillada al sol con un motivo floral impreso en blanco, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado.',2),
+    ('Petal Charm', 'Reloj4.png','Este elegante reloj de acero inoxidable tiene una esfera rosa cepillada al sol con un motivo floral impreso en blanco, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado.',3),
+    ('Blue Petal Promise', 'Reloj5.png','Este elegante reloj de acero inoxidable tiene una esfera azul cepillada al sol con un motivo floral impreso en azul claro, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado.',4),
+    ('Pink Petal Promise', 'Reloj6.png','Este elegante reloj de acero inoxidable tiene una esfera rosa cepillada al sol con un motivo floral impreso en blanco, aguja horaria y minutero plateados que brillan en la oscuridad y segundero plateado.',5),
+    ('Squarely Berry', 'Reloj7.png','La caja cuadrada de color rosa oscuro mate de este reloj de Bioceramic está cubierta por un cristal de material de origen biológico de borde a borde que ofrece una vista lateral de la pista de minutos impresa en rosa claro.',1),
+    ('Squarely Blacklight', 'Reloj8.png','La caja cuadrada de color azul oscuro mate de este reloj de Bioceramic está cubierta por un cristal de material de origen biológico de borde a borde que ofrece una vista lateral de la pista de minutos impresa en azul claro.',2),
+    ('Middlesteel', 'Reloj9.png','Ni grande, ni pequeño: MIDDLESTEEL (YLS468G) tiene el tamaño perfecto y una esfera verde oscuro con apliques de Swatch y ventana de fecha. El brazalete de acero inoxidable va a juego con la caja.',3),
+    ('Pinkaround', 'Reloj0.png','Es tiempo de amar con PINKAROUND (YLS455G). La espectacular esfera rosa satinada con impresiones en blanco y gris incluye una ventana que muestra la fecha a las 3 para que no se te olvide nunca tu cita con la persona deseada.',4);
 
 insert into comentarios (comentario, idUsuario, idProducto)
 	values ('Excelente diseño y calidad. ¡Estos relojes son perfectos para cualquier ocasión! Me encanta cómo combinan estilo y durabilidad. Definitivamente una gran inversión.', 1, 1),
