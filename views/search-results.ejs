@@ -6,7 +6,11 @@
 
 <body>
 	
-	<%- include("./partials/header.ejs")%>
+	<% if (locals.user) { %>
+		<%- include('partials/headerLogueado.ejs') %>
+	  <% } else { %>
+		<%- include('partials/header.ejs') %>
+	  <% } %>
 
 	<!-- Novedades -->
 	<div class="container products-wrapper">
@@ -21,17 +25,17 @@
 					<section class="product-box">
 						<a href="/products/id/<%= searchProducts[i].idProducto %>"> 
 							<figure class="product-box_image">
-								<img src="<%=searchProducts[i].fotoProducto%>" alt="">
+								<img src="images/products/<%=searchProducts[i].fotoProducto%>" alt="">
 							</figure>
 							<article class="product-box_data">
 								<h2> <a href="/products/id/<%= searchProducts[i].idProducto %>"> <%=searchProducts[i].nombreProducto%> </a></h2> <!-- No se si hay que borrar el /id o no -->
 								<p> <%=searchProducts[i].descProducto%> </p>
 								
-							</article>
+							
 							<p>Publicado por:<a href="/profile/<%= searchProducts[i].idUsuario %>" class="saludo"> <%= searchProducts[i].usuarios.nombreUsuario %>
 								</a>
 							  </p>
-							  
+							</article>
 						</a>
 					</section>
 					</div>

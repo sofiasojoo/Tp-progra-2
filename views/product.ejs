@@ -6,42 +6,46 @@
 
 <body>
 
-	<%- include("./partials/header.ejs")%>
+	<% if (locals.user) { %>
+		<%- include('partials/headerLogueado.ejs') %>
+	  <% } else { %>
+		<%- include('partials/header.ejs') %>
+	  <% } %>
+	  
 
 	<!-- product detail -->
 	<div class="container products-wrapper">
 		<div class="d-flex align-items-center">
 			<h2 class="products-title"><%= productoDetalle.nombreProducto %>
 			</h2> 
-			<p class="product-detail-description">
-				<a href="/products/product-add">Editar</a>
-			</p>
+			
 		</div>
 		<div class="product-detail">
 			<div class="row">
 				<article class="col-12 col-lg-8 product-detail-info">
-					<img src="<%= productoDetalle.fotoProducto %>
-					" alt="" class="product-detail-img">
+					<img src="/images/products/<%=productoDetalle.fotoProducto%>" 
+					 alt="" class="product-detail-img">
 					<p class="product-detail-description"> <%= productoDetalle.descProducto %></p>
 				</article>
 
 				<div class="col-12 col-lg-4">
 					<section class="comments">
 					
-							<% for (let i = 0; i <productoDetalle.length; i++) { %>	
+							<% for (let i = 0; i <productoDetalle.comentarios.length; i++) { %>	
 								<article>
-								<img src="<%=productoDetalle[i].comentarios[0].imagen%>" alt="">
+								
 								<div class="data">
-									<h2 class="user"> <a href="/profile"> <%= productoDetalle[i].comentarios[0].nombres%> </a></h2>
-									<p class="user"> <%=productoDetalle[i].comentarios[0].texto%> </p>
+									<h2 class="user"> <a href="/profile/<%= productoDetalle.comentarios[i].usuarios.idUsuario%>"> <%= productoDetalle.comentarios[i].usuarios.nombreUsuario%> </a></h2>
+									<p class="user"> <%=productoDetalle.comentarios[i].comentario%> </p>
 								</div>
 							</article>
 							 <% } %>
 
 					</section>
-					<form class="form" action="" method="POST">
-						<input class="form-input" type="text" value="" placeholder="Agregar comentario">
+					<form class="form" action="/products/comentarios/<%= productoDetalle.idProducto %>" method="POST">
+						<input class="form-input" type="text" name="comentario" value="" placeholder="Agregar comentario">
 						<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
+					
 					</form>
 					<hr>
 				</div>

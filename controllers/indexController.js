@@ -23,7 +23,7 @@ const indexController={
  
   profile: function(req, res) {
     User.findByPk(req.params.id, {
-      include: [{association: "producto"}]
+      include: [{association: "productos"}]
     })
           .then(function(usuario) {
               res.render('profile', { usuario });
@@ -38,15 +38,20 @@ const indexController={
 
 
   login: function(req, res) {
+    if (req.session.user != undefined) {
+      return res.redirect (`/profile/${req.session.user.idUsuario}`)
+    } else {
         return res.render("login");
-    
+    }
       },
   
     register: function(req, res) {
-      return res.render("register");
-  },
-
- 
+      if (req.session.user != undefined) {
+        return res.redirect (`/profile/${req.session.user.idUsuario}`)
+      } else {
+          return res.render("register");
+      }
+        },
   logout: function(req, res, next) {
     req.session.destroy();
     res.clearCookie("user");
@@ -54,27 +59,31 @@ const indexController={
     
     },
     productadd: function(req, res) {
+      if (req.session.user == undefined) {
+        return res.redirect ("/login")
+      } else {
       return res.render("product-add");
-  },  
+    }},  
     create: function(req, res){
          if (req.body.email == ""){
           return res.send("completar el email")
          }
          if (req.body.password.length < 3 || req.body.password == ""){
-          return res.send("La password es muy corta o esta vacia") 
+          return res.send("La password es muy corta") 
          }
           User.findOne(
               {where: [{mail: req.body.email}]}
           ).then(function(user){
               if(user != null){
-                   res.send("El email ya esta registrado") // por ahora anda
-                   return res.redirect('/profile'); // esto no anda y lo puedo arreglar pero hay que preguntar bien que pide la consigna 
+                   res.send("El email ya esta registrado") 
+                    
               }
               User.create({
                   nombreUsuario: req.body.usuario,
                   mail: req.body.email,
                   contrasenia: bcrypt.hashSync(req.body.password, 10),
                   fechaNacimiento: req.body.fecha_nacimiento,
+                  fotoPerfil: "/images/users/pexels-photo-1222271.jpeg"
               })
               .then(function(User){
                   return res.redirect('/');
@@ -100,7 +109,7 @@ const indexController={
                   const comparacion = bcrypt.compareSync(req.body.password, usuario.contrasenia)
                   
                   if (comparacion == true){             
-                      req.session.usuario = usuario
+                      req.session.user = usuario
                          
                   if (req.body.recordarme != undefined){
                       res.cookie('user',usuario,{ maxAge: 1000 * 60 * 5});  

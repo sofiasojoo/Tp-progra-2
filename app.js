@@ -28,8 +28,8 @@ app.use(session( { secret: "Nuestro mensaje secreto",
   saveUninitialized: true }));
 
   app.use(function(req, res, next){
-    res.locals.usuario = req.session.usuario;
-    console.log('Usuario en locals:', res.locals.usuario);
+    res.locals.user = req.session.user;
+    console.log('Usuario en locals:', res.locals.user);
     next();
 });
 

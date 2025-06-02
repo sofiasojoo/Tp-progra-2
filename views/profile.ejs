@@ -4,7 +4,11 @@
 <%- include("./partials/head.ejs")%>
 
 <body>
-	<%- include("./partials/headerLogueado.ejs")%>
+	<% if (locals.user) { %>
+		<%- include('partials/headerLogueado.ejs') %>
+	  <% } else { %>
+		<%- include('partials/header.ejs') %>
+	  <% } %>
 
 	<!-- Datos del usuario -->
 	<section class="info-usuario container products-wrapper">
@@ -47,7 +51,7 @@
 					<section class="product-box">
 						<a href="/products/id/<%=usuario.productos[i].idProducto%>"> 
 							<figure class="product-box_image">
-								<img src="<%=usuario.productos[i].fotoProducto%>" alt="">
+								<img src="/images/products/<%=usuario.productos[i].fotoProducto%>" alt="">
 							</figure>
 							<article class="product-box_data">
 								<h2> <a href="/products/id/<%=usuario.productos[i].idProducto%>"> <%=usuario.productos[i].nombreProducto%> </a></h2>

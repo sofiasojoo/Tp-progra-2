@@ -6,7 +6,11 @@
 
 <body>
 	
-	<%- include("./partials/headerLogueado.ejs")%>
+	<% if (locals.user) { %>
+		<%- include('partials/headerLogueado.ejs') %>
+	  <% } else { %>
+		<%- include('partials/header.ejs') %>
+	  <% } %>
 
 	<!-- Novedades -->
 	<div class="container products-wrapper">

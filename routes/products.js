@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
 
 router.get('/id/:id', productController.detalle);
 router.post('/product-add', productController.productadd);
-
+router.post('/comentarios/:id', productController.comentarios);
 
 
 module.exports = router;

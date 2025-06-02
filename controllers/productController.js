@@ -8,9 +8,15 @@ const productController={
             let idProducto = req.params.id;
           
             db.Producto.findByPk(idProducto, {
-              include: [{ association: "comentario" }]
+              include: [
+                { association: "comentarios", 
+                  include: [{ association: "usuarios" }
+
+                  ] }, 
+                ]
             })
               .then(function(producto){
+              
                 res.render('product', { productoDetalle: producto });
               })
               .catch(function(error){
@@ -21,9 +27,7 @@ const productController={
       }
       , 
       productadd: function (req, res) {
-        if (!req.session.usuario) {
-          return res.redirect('/login');
-         }
+       
         productos_add.create({
          nombreProducto: req.body.nombreProducto,
          descProducto: req.body.descProducto,
@@ -31,12 +35,33 @@ const productController={
          idUsuario: req.session.usuario.idUsuario
   })
     .then(function(){
-                res.redirect('/login');
+                res.redirect('/');
       })
     .catch(function(error){
                 return res.send(error);
       })
-}
+},
+comentarios: function (req,res) {
+  if (req.session.user == undefined) {
+    return res.redirect ("/login")
+  } else {
+     
+  
+ 
+  db.Comentario.create({
+  idProducto: req.params.id,
+  idUsuario: req.session.user.idUsuario,
+  comentario: req.body.comentario,
+
+  })
+  .then(function(){
+    res.redirect(`/products/id/${req.params.id}`);
+})
+.catch(function(error){
+    return res.send(error);
+})
+  
+}}
           
 }
 

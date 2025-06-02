@@ -38,12 +38,12 @@
 				</ul>
 	
 				<ul class="right-navbar">
-					<li><a href="/profile/<%= usuario.idUsuario %>" class="saludo">Hola <%= usuario.nombreUsuario %> <i class="fas fa-user"></i></a>
+					<li><a href="/profile/<%= locals.user.idUsuario %>" class="saludo">Hola <%= locals.user.nombreUsuario %> <i class="fas fa-user"></i></a>
 					</li>
 					<li>
 						<form action="/logout" method="get">
 							<button class="logout" type="submit">
-								<b>Cerrar sesión</b> <i class="fas fa-sign-in-alt"></i>
+								<b>Logout</b> <i class="fas fa-sign-in-alt"></i>
 							</button>
 						</form>
 					</li>
