@@ -533,7 +533,9 @@ textarea.form-input {
   color: #fff;
 }
 
-
+.saludo{
+  text-decoration: none;
+}
 /*====== Media-Queries ======*/
 @media (min-width: 768px) {
   .main-header_credit-link {
