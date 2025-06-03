@@ -31,9 +31,7 @@ module.exports = function(sequelize, dataTypes){
 
     let config = {
         tableName : "productos",
-        timestamps:false, //Indica al modelo si debe buscar los campos createdAt y updatedAt en la tabla. Si están en la tabla no es necesario declararlos en la lista de campos.
-        // Si en la tabla están con guión bajo hay que usar la propiedad underscore.
-        // underscored: false, //Indica al modelo que si loscampos de timestamp en la tabla usan o no guiones bajos en lugar de camelCase.
+        timestamps:false, 
     }
 
    let Producto = sequelize.define(alias, cols, config);
